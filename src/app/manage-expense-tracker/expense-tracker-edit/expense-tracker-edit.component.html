@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card" style="margin-top: 20px;">
+        <div class="card-header">
+            <strong>Expense Details</strong>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="expenseDetailsForm" class="form-group">
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="number" class="form-control" placeholder="Amount" formControlName="amount">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="date" class="form-control" placeholder="Insert time">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="date" class="form-control" placeholder="Update time">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <textarea rows="4" cols="50" class="form-control" placeholder="Description"
+                        formControlName="description"></textarea>
+                </div>
+                <div class="row">
+                    <button class="btn btn-dark btn-sm col-md-1" style="margin-left: 20px;margin-top: 10px;">Back</button>
+                    &nbsp;
+                    <button class="btn btn-dark btn-sm col-md-1" style="margin-top: 10px;">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card" style="margin-top: 20px;">
+        <div class="card-header">
+            <strong>Expense Details</strong>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="expenseDetailsForm" class="form-group" (ngSubmit)="submitExpenseTrackerDetails(expenseDetailsForm.value)">
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <input type="number" class="form-control" placeholder="Amount" formControlName="amount">
+                </div>
+                <div class="col-md-4" style="margin: 10px;">
+                    <textarea rows="4" cols="50" class="form-control" placeholder="Description"
+                        formControlName="description"></textarea>
+                </div>
+                <div class="row">
+                    <button class="btn btn-dark btn-sm col-md-1" style="margin-left: 20px;margin-top: 10px;" (click)="gotoExpenseDetails()">Back</button>
+                    &nbsp;
+                    <button type="submit" class="btn btn-dark btn-sm col-md-1" style="margin-top: 10px;">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

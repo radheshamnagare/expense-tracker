@@ -1,0 +1,31 @@
+<div class="container">
+    <br />
+    <div class="text text-uppercase text-md-center">
+        <strong>{{selectedReportType}} Report</strong>
+    </div>
+    <div class="row" style="margin: 10px;padding: 10px;background-color: aliceblue;">
+        <div class="col-md-3">
+            <select class="form-control" id="chart_type" [(ngModel)]="selectedChartType" (change)="loadGraphTypeWise()">
+                <option *ngFor="let i of chartTypes" [value]="i.value">{{i.name}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" [(ngModel)]="selectedReportType" (change)="loadGraphTypeWise()">
+                <option *ngFor="let i of reportTypes" [value]="i.value">{{i.name}}</option>
+            </select>
+        </div>
+        <div class="col-md-2" *ngIf="selectedReportType=='MONTH'">
+            <input [(ngModel)]="selectedMonth" type="number" class="form-control" value="0" placeholder="Input Month" />
+        </div>
+        <div class="col-md-2">
+            <input [(ngModel)]="selectedYear" type="number" class="form-control" value="0" placeholder="Input Year" />
+        </div>
+    </div>
+
+    <div class="row-cols-md-10">
+        <!--charts -->
+        <div>
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+</div>

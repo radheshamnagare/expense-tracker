@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card" style="margin-top: 60px;width: 600px;">
+        <div class="row card-body">
+            <form [formGroup]="userForm" class="form-group" (ngSubmit)="submitUserDetails(userForm.value)">
+                <div class="col-md-6">
+                    <input class="form-control" type="text" style="margin: 10px;" placeholder="User Name"
+                        formControlName="username">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" type="password" style="margin: 10px;" placeholder="Password"
+                        formControlName="password">
+                </div>
+                <button class="btn btn-success" style="margin: 10px;width: 150px;" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

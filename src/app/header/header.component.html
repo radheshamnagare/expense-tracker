@@ -1,0 +1,35 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info-subtle border-bottom border-top ">
+        <div class="container">
+            <a class="navbar-brand fs-2 fw-bold " href="#">
+                <i class="fa-solid fa-scale-unbalanced-flip" style="color: #022442;"></i>
+                <span class="textBlur">{{title}}</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul *ngIf="userService.isLogInUser" class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link fw-semibold text-uppercase  me-1 text-danger " routerLink="/graph">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase text-black  me-1" routerLink="/expence-details">
+                            manage expense
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase text-black  me-1" href="#" (click)="logout()">
+                            logout <i style="color: orangered;" class="fa-solid fa-right-from-bracket fa-1x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
