@@ -1,4 +1,4 @@
-# expense-tracker
+# Expense-tracker
 
 
 ## Either download or fork mediator
